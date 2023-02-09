@@ -14,8 +14,8 @@ h1 {
 
 .row {
    
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 30px;
+    min-width: 30px;
     
 }
 
@@ -23,8 +23,8 @@ h1 {
     border: 1px;
     border-style: groove;
     border-color: black;
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 30px;
+    min-width: 30px;
     display: flex;
 
 }
