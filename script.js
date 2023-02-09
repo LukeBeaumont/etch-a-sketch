@@ -5,9 +5,16 @@ function createGrid(size) {
         
         const row = document.createElement("div");
         row.classList.add("row");
-        mainContainer.appendChild(row);
+        mainContainer.append(row);
+
+        for(j=0; j<size; j++) {
+        
+            const box = document.createElement("div");
+            box.classList.add("box");
+            row.appendChild(box);
+    
 }
     }
     
-
-createGrid(5);
+}
+createGrid(10);

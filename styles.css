@@ -5,11 +5,26 @@ h1 {
     justify-content: center;
 }
 
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
 .row {
+   
+    min-height: 50px;
+    min-width: 50px;
+    
+}
+
+.box {
     border: 1px;
     border-style: groove;
     border-color: black;
     min-height: 50px;
     min-width: 50px;
     display: flex;
+
 }
