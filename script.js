@@ -23,7 +23,7 @@ function createBoard (size) {
     let div = document.createElement("div");
 
     grid.insertAdjacentElement("beforeend", div);
-   // div.addEventListener("mouseover", colorDiv());
+    div.addEventListener("mouseover", colorDiv);
   }
 }
 
@@ -39,4 +39,21 @@ function selectSize () {
     else {info.textContent = `Grid size: ${input}`;
     return input;
     }
+}
+
+function colorDiv() {
+    if(color == "rainbow"){
+        this.style.backgroundColor = `hsl(${Math.random*360}, 100%, 50%)`
+    } else if (color == "red") {
+        this.style.backgroundColor = "red"
+    } else if (color == "white"){
+        this.style.backgroundColor = "white"
+    } else 
+        this.style.backgroundColor = "black"
+}
+
+
+function setColor(colorChoice) {
+    color = colorChoice;
+    console.log(color)
 }
