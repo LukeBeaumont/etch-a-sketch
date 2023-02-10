@@ -9,7 +9,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-   }
+    
+    
+}
 
 .grid {
     
@@ -17,4 +19,31 @@ h1 {
     width: 500px;
     border: 1px solid black;
     display: grid;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.size-button {
+    margin: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.black,.red,.rainbow,.eraser {
+    margin: 10px;
 }

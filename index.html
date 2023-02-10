@@ -5,14 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = 'stylesheet' href = "styles.css">
+    
     <title>Document</title>
 </head>
 <body>
+    
   <h1> Etch-a-Sketch </h1>
+  <div class="buttons">
+    <button class = "size-button"> Select Size</button>
+    <p class = "info"></p>
+  </div>
   <div class="main-container">
     <div class="grid"></div>
   </div>
-   
+  <div class="colors">
+    <button class = "black" onclick="setColor('black')">Black</button>
+    <button class = "red" onclick="setColor('red')">Red</button>
+    <button class = "rainbow" onclick="setColor('rainbow')">Rainbow</button>
+    <button class = "eraser" onclick="setColor('white')">Eraser</button>
+  </div>
+
 </body>
 <script src = "script.js"></script>
 </html>
