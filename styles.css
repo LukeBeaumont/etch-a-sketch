@@ -9,22 +9,12 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-   
-}
+   }
 
-.row {
-   
-    min-height: 30px;
-    min-width: 30px;
+.grid {
     
-}
-
-.box {
-    border: 1px;
-    border-style: groove;
-    border-color: black;
-    min-height: 30px;
-    min-width: 30px;
-    display: flex;
-
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    display: grid;
 }

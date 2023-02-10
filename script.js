@@ -1,24 +1,18 @@
-const mainContainer = document.querySelector(".main-container");
-const div = document.querySelectorAll("div")
+document.addEventListener("DOMContentLoaded", createBoard(15));
 
-function createGrid(size) {
-    for(i=0; i<size; i++) {
-        
-        const row = document.createElement("div");
-        row.classList.add("row");
-        mainContainer.append(row);
+function createBoard (size) {
+    let grid = document.querySelector(".grid");
 
-        for(j=0; j<size; j++) {
-        
-            const box = document.createElement("div");
-            box.classList.add("box");
-            row.appendChild(box);
-            box.addEventListener("mouseenter", ()=> 
-            box.style.backgroundColor = 'black');
-        }
-    }
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    
+  let numOfDiv = size * size;
+
+  for(let i = 0; i < numOfDiv; i++) {
+    let div = document.createElement("div");
+
+    grid.insertAdjacentElement("beforeend", div);
+    
+  }
 }
 
-
-
-createGrid(15);
