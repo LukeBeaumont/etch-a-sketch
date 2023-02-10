@@ -43,7 +43,7 @@ function selectSize () {
 
 function colorDiv() {
     if(color == "rainbow"){
-        this.style.backgroundColor = `hsl(${Math.random*360}, 100%, 50%)`
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
     } else if (color == "red") {
         this.style.backgroundColor = "red"
     } else if (color == "white"){
@@ -51,7 +51,6 @@ function colorDiv() {
     } else 
         this.style.backgroundColor = "black"
 }
-
 
 function setColor(colorChoice) {
     color = colorChoice;
