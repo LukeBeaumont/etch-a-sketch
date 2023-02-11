@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     let sizeButton = document.querySelector(".size-button");
     sizeButton.addEventListener("click", ()=> {
-    
+    reset();
     let size = selectSize();
     createBoard(size);
+    
   })
 })
 
@@ -56,3 +57,8 @@ function setColor(colorChoice) {
     color = colorChoice;
     console.log(color)
 }
+
+function reset() {
+    let divs = document.querySelectorAll('div')
+    divs.forEach((div)=> div.style.backgroundColor = "white");
+    }
