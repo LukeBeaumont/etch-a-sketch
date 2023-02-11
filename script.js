@@ -1,7 +1,22 @@
 let color = "black";
+let click = "false";
 
 document.addEventListener("DOMContentLoaded", ()=> {
     createBoard(16);
+
+    document.querySelector("body").addEventListener("click", function(e) {
+     if (e.target.tagName != "BUTTON") {
+        click = !click;
+
+     let drawing = document.querySelector(".on-or-off")
+        if (click){
+            drawing.textContent = "Drawing: On"
+        } else 
+                drawing.textContent = "Drawing: Off"
+     }
+    })
+     
+    
 
     let sizeButton = document.querySelector(".size-button");
     sizeButton.addEventListener("click", ()=> {
@@ -43,6 +58,7 @@ function selectSize () {
 }
 
 function colorDiv() {
+   if (click){
     if(color == "rainbow"){
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
     } else if (color == "red") {
@@ -51,7 +67,7 @@ function colorDiv() {
         this.style.backgroundColor = "white"
     } else 
         this.style.backgroundColor = "black"
-}
+}}
 
 function setColor(colorChoice) {
     color = colorChoice;

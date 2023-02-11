@@ -15,8 +15,8 @@ h1 {
 
 .grid {
     
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     border: 1px solid black;
     display: grid;
 }
@@ -46,4 +46,9 @@ h1 {
 
 .black,.red,.rainbow,.eraser {
     margin: 10px;
+}
+
+.on-or-off {
+    display: flex;
+    justify-content: center;
 }
