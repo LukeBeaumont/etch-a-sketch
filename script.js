@@ -4,15 +4,15 @@ let click = "false";
 document.addEventListener("DOMContentLoaded", ()=> {
     createBoard(16);
 
-    document.querySelector("body").addEventListener("click", function(e) {
+    document.querySelector("body").addEventListener("click", (e)=> {
      if (e.target.tagName != "BUTTON") {
         click = !click;
 
-     let drawing = document.querySelector(".on-or-off")
+     let drawing = document.querySelector(".on-or-off");
         if (click){
-            drawing.textContent = "Drawing: On"
+            drawing.textContent = "Drawing: On";
         } else 
-                drawing.textContent = "Drawing: Off"
+                drawing.textContent = "Drawing: Off";
      }
     })
      
@@ -60,21 +60,21 @@ function selectSize () {
 function colorDiv() {
    if (click){
     if(color == "rainbow"){
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else if (color == "red") {
-        this.style.backgroundColor = "red"
+        this.style.backgroundColor = "red";
     } else if (color == "white"){
-        this.style.backgroundColor = "white"
+        this.style.backgroundColor = "white";
     } else 
-        this.style.backgroundColor = "black"
+        this.style.backgroundColor = "black";
 }}
 
 function setColor(colorChoice) {
     color = colorChoice;
-    console.log(color)
+    console.log(color);
 }
 
 function reset() {
-    let divs = document.querySelectorAll('div')
-    divs.forEach((div)=> div.style.backgroundColor = "white");
+    document.querySelectorAll('div').forEach((div)=>
+      div.style.backgroundColor = "white");
     }
