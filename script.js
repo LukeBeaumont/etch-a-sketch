@@ -37,10 +37,12 @@ function createBoard (size) {
 
   for(let i = 0; i < numOfDiv; i++) {
     let div = document.createElement("div");
+    div.classList.add("box")
 
     grid.insertAdjacentElement("beforeend", div);
     div.addEventListener("mouseover", colorDiv);
-  }
+
+ }
 }
 
 function selectSize () {
@@ -79,7 +81,12 @@ function reset() {
       div.style.backgroundColor = "white");
     }
 
-function gradient () {
-    let currentOpacity = this.style.opacity;
-    console.log (this)
-}
+function gradient() {
+    document.querySelectorAll(".box").forEach((box) => box.addEventListener("mouseenter", ()=> {
+
+  let currentOpacity = Number(box.style.opacity);
+    box.style.opacity = currentOpacity + .1;
+    
+     }))
+    
+} 
