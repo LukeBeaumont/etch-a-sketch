@@ -78,3 +78,8 @@ function reset() {
     document.querySelectorAll('div').forEach((div)=>
       div.style.backgroundColor = "white");
     }
+
+function gradient () {
+    let currentOpacity = this.style.opacity;
+    console.log (this)
+}
