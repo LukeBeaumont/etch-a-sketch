@@ -85,10 +85,10 @@ function reset() {
 
 function gradient() {
     document.querySelectorAll(".box").forEach((box) => box.addEventListener("mouseenter", ()=> {
-
+        if (click){
   let currentOpacity = Number(box.style.opacity);
     box.style.opacity = currentOpacity + .1;
-    
+        }
      }))
     
 } 
