@@ -77,9 +77,11 @@ function setColor(colorChoice) {
 }
 
 function reset() {
-    document.querySelectorAll('div').forEach((div)=>
-      div.style.backgroundColor = "white");
-    }
+    document.querySelectorAll('.box').forEach((box)=>{
+      box.style.backgroundColor = "white";
+      box.style.opacity = 0;
+ })
+}
 
 function gradient() {
     document.querySelectorAll(".box").forEach((box) => box.addEventListener("mouseenter", ()=> {
